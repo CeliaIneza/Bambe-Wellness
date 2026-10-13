@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-teal: #176B67;
+    --soft-sage: #DDEFE8;
+    --warm-cream: #FAF7F0;
+    --warm-sand: #E9DCCB;
+    --soft-coral: #E98B7A;
+    --main-text: #1F2933;
+    --emergency-red: #C83C3C;
+    --card-shadow: 0 4px 20px -2px rgba(23, 107, 103, 0.08);
+  }
+}
+
+@theme {
+  --font-sans: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-teal-primary: #176B67;
+  --color-teal-hover: #125552;
+  --color-sage-soft: #DDEFE8;
+  --color-cream-warm: #FAF7F0;
+  --color-sand-warm: #E9DCCB;
+  --color-coral-soft: #E98B7A;
+  --color-text-main: #1F2933;
+  --color-emergency: #C83C3C;
+}
+
+body {
+  background-color: #FAF7F0;
+  color: #1F2933;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bambe-card {
+  background: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(23, 107, 103, 0.06);
+  transition: all 0.2s ease-in-out;
+}
+
+.bambe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px -4px rgba(23, 107, 103, 0.12);
+}
