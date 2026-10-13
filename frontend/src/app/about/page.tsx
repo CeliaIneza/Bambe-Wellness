@@ -21,7 +21,7 @@ export default function AboutPage() {
           We believe mental wellbeing belongs to everyone.
         </h1>
         <p className="text-lg text-[#1F2933]/80 leading-relaxed">
-          Bambe Center is a modern, accessible initiative created to normalize conversations about mental health, reduce stigma, and connect people in Rwanda with compassionate support.
+          Bambe Center is a modern, accessible initiative created to normalize conversations about mental health, reduce stigma, and connect people with compassionate support.
         </p>
       </div>
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
             <span>Our Mission</span>
           </h2>
           <p className="text-base text-[#1F2933]/80 leading-relaxed">
-            To make mental health information, self-care tools, and support care easier to understand and access in Rwanda—without stigma or clinical barriers.
+            To make mental health information, self-care tools, and support care easier to understand and access without stigma or clinical barriers.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <span>Our Vision</span>
           </h2>
           <p className="text-base text-[#1F2933]/80 leading-relaxed">
-            A Rwanda where taking care of your mental wellbeing is normal, accessible, culturally understood, and free from judgment.
+            A place where taking care of your mental wellbeing is normal, accessible, culturally understood, and free from judgment.
           </p>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
           </div>
           <div className="p-4 bg-white rounded-2xl border border-[#E9DCCB]">
             <p className="font-bold text-[#176B67] mb-1">Rooted in Rwanda</p>
-            <p>Designed specifically for Rwandan culture, family structures, and everyday experiences.</p>
+            <p>Designed specifically for our culture, family structures, and everyday experiences.</p>
           </div>
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
       <div className="bg-white rounded-3xl p-8 border border-[#E9DCCB] flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="space-y-1 text-center sm:text-left">
           <h3 className="text-xl font-bold font-serif text-[#1F2933]">
-            Meet Our Rwandan Care Professionals
+            Meet Our Care Professionals
           </h3>
           <p className="text-sm text-[#1F2933]/70">
             Qualified counsellors, mental health educators, and wellbeing specialists.

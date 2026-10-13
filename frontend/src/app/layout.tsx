@@ -13,9 +13,9 @@ const mainFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Bambe Center — Mental Wellness & Support for Rwanda',
-  description: 'A modern, accessible, bilingual (English & Kinyarwanda) mental wellness website for Rwanda. You don\'t have to go through it alone.',
-  keywords: ['mental health Rwanda', 'mental wellness Rwanda', 'counselling Rwanda', 'Kigali support', 'Rwanda wellness'],
+  title: 'Bambe Center - Mental Wellness & Support',
+  description: 'A modern, accessible, bilingual (English & Kinyarwanda) mental wellness website. You don\'t have to go through it alone.',
+  keywords: ['mental health', 'mental wellness', 'counselling', 'Kigali support', 'Rwanda wellness'],
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ export default function ContactPage() {
           We're here to hear from you.
         </h1>
         <p className="text-lg text-[#1F2933]/80 leading-relaxed">
-          Whether you have general questions, partnership ideas, or want to learn more about our wellbeing initiatives in Rwanda, feel free to drop us a message.
+          Whether you have general questions, partnership ideas, or want to learn more about our wellbeing initiatives, feel free to drop us a message.
         </p>
       </div>
 
