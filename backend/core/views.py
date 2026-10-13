@@ -1,6 +1,13 @@
-from rest_framework import viewsets, status
-from rest_framework.response import Response
-from .models import SupportRequest, ContactMessage, CheckInSubmission, ResourceArticle, TeamMember, FAQ
+from rest_framework import mixins, viewsets
+
+from .models import (
+    SupportRequest,
+    ContactMessage,
+    CheckInSubmission,
+    ResourceArticle,
+    TeamMember,
+    FAQ,
+)
 from .serializers import (
     SupportRequestSerializer,
     ContactMessageSerializer,
@@ -10,27 +17,44 @@ from .serializers import (
     FAQSerializer,
 )
 
-class SupportRequestViewSet(viewsets.ModelViewSet):
-    queryset = SupportRequest.objects.all().order_by('-created_at')
+
+# Visitors can submit forms, but cannot list, read, edit, or delete submissions.
+class SupportRequestViewSet(
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet,
+):
+    queryset = SupportRequest.objects.all()
     serializer_class = SupportRequestSerializer
 
-class ContactMessageViewSet(viewsets.ModelViewSet):
-    queryset = ContactMessage.objects.all().order_by('-created_at')
+
+class ContactMessageViewSet(
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet,
+):
+    queryset = ContactMessage.objects.all()
     serializer_class = ContactMessageSerializer
 
-class CheckInSubmissionViewSet(viewsets.ModelViewSet):
-    queryset = CheckInSubmission.objects.all().order_by('-created_at')
+
+class CheckInSubmissionViewSet(
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet,
+):
+    queryset = CheckInSubmission.objects.all()
     serializer_class = CheckInSubmissionSerializer
 
-class ResourceArticleViewSet(viewsets.ModelViewSet):
+
+# Public visitors can read website content but cannot modify it through the API.
+class ResourceArticleViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = ResourceArticle.objects.all().order_by('-published_at')
     serializer_class = ResourceArticleSerializer
     lookup_field = 'slug'
 
-class TeamMemberViewSet(viewsets.ModelViewSet):
+
+class TeamMemberViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = TeamMember.objects.all().order_by('order')
     serializer_class = TeamMemberSerializer
 
-class FAQViewSet(viewsets.ModelViewSet):
+
+class FAQViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = FAQ.objects.all().order_by('order')
     serializer_class = FAQSerializer
