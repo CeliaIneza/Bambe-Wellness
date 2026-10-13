@@ -15,3 +15,6 @@ out/
 
 # Secrets and local databases
 *.sqlite3
+
+# Django generated static files
+backend/staticfiles/
